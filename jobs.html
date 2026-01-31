@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jobs | The Professionals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/jobs.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">The <span>Professionals</span></a>
+  </div>
+
+  <nav class="nav-right">
+    <a href="index.html">Home</a>
+
+    <div class="nav-dropdown">
+      <a href="#" class="nav-link">Login ▾</a>
+      <div class="dropdown-menu">
+        <a href="auth/login-jobseeker.html">As Candidate</a>
+        <a href="auth/login-employer.html">As Recruiter</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="jobs-header">
+  <h1>Find Your Next Job</h1>
+  <p>Browse verified opportunities from trusted employers</p>
+
+  <!-- SEARCH -->
+  <form class="jobs-search">
+    <input type="text" placeholder="Job title, skill or keyword">
+    <input type="text" placeholder="Location">
+    <button type="submit">Search</button>
+  </form>
+</section>
+
+<!-- JOB LIST -->
+<section class="jobs-container" id="jobsContainer"></section>
+  <!-- Jobs will load here dynamically -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 Opnex (OPC) Pvt Ltd</p>
+    <p>All rights reserved.</p>
+  </div>
+</footer>
+<script src="assets/js/jobs.js"></script>
+
+</body>
+</html>

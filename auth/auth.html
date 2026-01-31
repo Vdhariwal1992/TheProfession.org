@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | TheProfession.org</title>
+<link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<div class="auth-page">
+
+  <!-- LEFT PANEL -->
+  <div class="auth-visual">
+    <img src="assets/login-illustration.png" alt="Login">
+    <h2>Grow Your Career With AI</h2>
+    <p>Find jobs, build smart resumes and get hired faster.</p>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="auth-form-panel">
+
+    <div class="auth-card">
+
+      <h2 id="formTitle">Login</h2>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm">
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Password</label>
+        <input type="password" required>
+
+        <a class="forgot" href="#">Forgot password?</a>
+
+        <button class="btn primary">Login</button>
+
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="signupForm" class="hidden">
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email</label>
+        <input type="email" required>
+
+        <label>Mobile</label>
+        <input type="tel" required>
+
+        <label>Password</label>
+        <input type="password" required>
+
+        <button class="btn primary">Create Account</button>
+
+      </form>
+
+      <p class="switch">
+        <span id="switchText">Don't have an account?</span>
+        <a href="#" onclick="toggleForm()">Sign Up</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+function toggleForm(){
+  const login = document.getElementById("loginForm");
+  const signup = document.getElementById("signupForm");
+  const title = document.getElementById("formTitle");
+  const switchText = document.getElementById("switchText");
+
+  if(login.classList.contains("hidden")){
+    login.classList.remove("hidden");
+    signup.classList.add("hidden");
+    title.innerText = "Login";
+    switchText.innerText = "Don't have an account?";
+  }else{
+    login.classList.add("hidden");
+    signup.classList.remove("hidden");
+    title.innerText = "Create Account";
+    switchText.innerText = "Already have an account?";
+  }
+}
+</script>
+
+</body>
+</html>

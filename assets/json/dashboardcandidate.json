@@ -1,0 +1,21 @@
+{
+  "full_name": "Vishwas Dhariwal",
+  "current_role": "Legal Escalation Specialist",
+  "city": "Gurugram",
+  "country": "India",
+  "photo": "/uploads/photos/123.jpg",
+  "cover": "/uploads/covers/456.jpg",
+  "resume": "/uploads/resumes/v.pdf",
+
+  "allow_messages": true,
+
+  "experience": [...],
+  "education": [...],
+  "skills": [...],
+
+  "viewer": {
+    "role": "recruiter", 
+    "hasSubscription": true,
+    "isOwner": false
+  }
+}

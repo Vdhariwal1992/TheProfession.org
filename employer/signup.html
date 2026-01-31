@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Profile | TheProfession.org</title>
+<link rel="stylesheet" href="signup-profile.css">
+</head>
+
+<body class="signup-page">
+
+
+<div class="main-container">
+
+  <div class="signup-wrapper">
+
+    <!-- HEADER -->
+    <div class="page-header">
+      <div class="page-logo">TheProfession.org</div>
+    </div>
+
+    <!-- LEFT INFO -->
+    <div class="signup-info">
+
+      <img class="onboard-img" src="../assets/images/onboard.png" alt="Career Growth">
+
+      
+
+      <h2>Why create your profile?</h2>
+
+      <div class="benefit-group">
+        <h4>For Job Seekers</h4>
+        <ul>
+          <li>✔ Get matched with the right jobs</li>
+          <li>✔ Build AI-powered resume instantly</li>
+          <li>✔ Apply faster with smart profile</li>
+          <li>✔ Get training & certifications</li>
+        </ul>
+      </div>
+
+      <div class="benefit-group">
+        <h4>For Employers & Recruiters</h4>
+        <ul>
+          <li>✔ Post jobs easily</li>
+          <li>✔ Smart AI-based candidate matching</li>
+          <li>✔ Faster shortlisting</li>
+          <li>✔ Verified candidate profiles</li>
+        </ul>
+      </div>
+
+      <p class="info-note">
+        Your profile helps us personalize jobs, hiring and career tools for you.
+      </p>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="signup-form-box">
+<div class="role-toggle">
+  <div class="role-slider"></div>
+
+  <button type="button" class="role-btn active" data-role="candidate">
+    👤 Job Seeker
+  </button>
+
+  <button type="button" class="role-btn" data-role="recruiter">
+    🏢 Recruiter
+  </button>
+</div>
+
+      <h2>Create Your Profile</h2>
+      <p class="sub">Start your professional journey with AI-powered tools</p>
+
+      <form id="signupForm">
+<input type="hidden" id="userRole" name="role" value="candidate">
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+        <small id="emailError" class="error-text"></small>
+
+        <label>Mobile Number</label>
+        <div class="mobile-input">
+          <span>+91</span>
+          <input type="tel" placeholder="Enter mobile number" required>
+        </div>
+
+        <div class="two-col">
+
+  <!-- PASSWORD COLUMN -->
+  <div class="form-group">
+    <label>Password</label>
+
+    <div class="password-wrap">
+      <input type="password" id="password" placeholder="Enter password" required="">
+      <button type="button" class="toggle-pass" onclick="togglePassword()">Show</button>
+    </div>
+
+    <div class="strength-bar">
+      <span></span>
+    </div>
+    <small id="strengthText"></small>
+  </div>
+
+  <!-- CONFIRM PASSWORD COLUMN -->
+  <div class="form-group">
+  <label>Confirm Password</label>
+  <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+  <small id="matchText"></small>
+</div>
+
+</div>
+
+
+        <button type="submit" class="signup-btn">
+Create My Profile
+</button>
+        <p class="mobile-login">
+  Already have an account?
+  <a href="login.html">Login</a>
+</p>
+<div class="or-separator">
+  <span>or create my profile using</span>
+</div>
+
+<div class="social-login">
+  <button type="button" class="social-btn google"></button>
+  <button type="button" class="social-btn linkedin"></button>
+  <button type="button" class="social-btn microsoft"></button>
+</div>
+
+
+
+        <p class="terms">
+          By continuing, you agree to our
+          <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+        </p>
+        
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="common-footer">
+
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Careers</a>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://linkedin.com" target="_blank">
+      <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://x.com" target="_blank">
+      <img src="../assets/icons/x.png" alt="X">
+    </a>
+    <a href="https://facebook.com" target="_blank">
+      <img src="../assets/icons/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../assets/icons/instagram.png" alt="Instagram">
+    </a>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 OpNex (OPC) Pvt Ltd
+  </div>
+
+</footer>
+
+
+<script src="signup-profile.js"></script>
+
+</body>
+
+</html>

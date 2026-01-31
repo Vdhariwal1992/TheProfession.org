@@ -1,0 +1,32 @@
+[
+  {
+    "id": 101,
+    "title": "Cabin Crew",
+    "company": "IndiGo Airlines",
+    "location": "Delhi",
+    "salary": "₹6–8 LPA",
+    "type": "Full Time",
+    "category": "Aviation",
+    "description": "Ensure passenger safety, comfort and service onboard."
+  },
+  {
+    "id": 102,
+    "title": "Airport Ground Staff",
+    "company": "Airport Ops",
+    "location": "Mumbai",
+    "salary": "₹4–6 LPA",
+    "type": "Shift Based",
+    "category": "Airport Operations",
+    "description": "Handle airport ground operations and passenger support."
+  },
+  {
+    "id": 103,
+    "title": "Travel Consultant",
+    "company": "Global Travel",
+    "location": "Remote",
+    "salary": "₹5–7 LPA",
+    "type": "Work From Home",
+    "category": "Travel & Tourism",
+    "description": "Assist customers with travel planning and bookings."
+  }
+]

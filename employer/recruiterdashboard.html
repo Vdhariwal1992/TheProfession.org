@@ -1,0 +1,167 @@
+<script>
+if (sessionStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recruiter Dashboard | TheProfession.org</title>
+<link rel="stylesheet" href="../assets/css/recruiterdashboard.css">
+<link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="logo-text">TheProfession.org</div>
+
+    <div class="top-actions">
+      <button class="post-job-btn">+ Post Job</button>
+
+      <img src="../assets/icons/user-male.png" class="top-avatar">
+    </div>
+  </div>
+</header>
+
+<section class="container dashboard-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="recruiter-sidebar">
+
+    <div class="card profile-summary">
+
+      <div class="top-profile">
+  <img src="../assets/icons/user-male.png" class="top-avatar" id="profileToggle">
+
+  <div class="top-dropdown" id="profileMenu">
+    <a href="recruiter-profile.html">Profile Settings</a>
+    <button id="logoutBtn">Sign Out</button>
+  </div>
+</div>
+
+      <h4>HR Manager</h4>
+      <p>Indigo Airlines</p>
+
+      <span class="plan-pill">Free Plan</span>
+
+
+      <button class="upgrade-btn" onclick="openRecruiterPremium()">
+        Upgrade to Premium
+      </button>
+    </div>
+
+    <div class="card stats-card">
+      <div><b>5</b><span>  Jobs Posted</span></div>
+      <div><b>42</b><span> Applications</span></div>
+      <div><b>12</b><span> Shortlisted</span></div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="recruiter-main">
+
+    <!-- JOBS -->
+    <div class="card">
+      <h3>Your Job Posts</h3>
+
+      <div class="job-row">
+        <b>Cabin Crew – Delhi</b>
+        <span>18 Applications</span>
+        <button class="view-btn">View</button>
+
+      </div>
+
+      <div class="job-row">
+        <b>HR Executive – Noida</b>
+        <span>9 Applications</span>
+        <button class="view-btn">View</button>
+
+      </div>
+    </div>
+
+    <!-- APPLICATIONS (PREMIUM) -->
+    <div class="card premium-card">
+
+      <div class="lock-head">
+        🔒 Candidate Insights (Premium)
+      </div>
+
+      <p>View full resumes, contact details and AI match score</p>
+
+      <button onclick="openRecruiterPremium()">Unlock Premium</button>
+
+    </div>
+    
+    <!-- ===== PREMIUM MODAL ===== -->
+<div id="recruiterPremiumModal" class="modal">
+
+  <div class="premium-box">
+
+    <h2>Recruiter Premium 🚀</h2>
+    <p class="sub-text">Hire faster with advanced tools</p>
+
+    <div class="premium-features">
+      <div class="pf-item">📄 Full Resume Access</div>
+      <div class="pf-item">📞 Candidate Contact Details</div>
+      <div class="pf-item">🤖 AI Match Score</div>
+      <div class="pf-item">🎥 Virtual Interviews</div>
+      <div class="pf-item">📊 Hiring Analytics</div>
+    </div>
+
+    <div class="pricing-box">
+      <span class="old">₹2,999</span>
+      <span class="price">₹1,499 / month</span>
+    </div>
+
+    <button class="premium-btn">Upgrade Now</button>
+    <button class="cancel-btn" onclick="closeRecruiterPremium()">Later</button>
+
+  </div>
+
+</div>
+
+  </main>
+
+</section>
+
+
+<footer class="common-footer">
+
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Careers</a>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://linkedin.com" target="_blank">
+      <img src="../assets/icons/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://x.com" target="_blank">
+      <img src="../assets/icons/x.png" alt="X">
+    </a>
+    <a href="https://facebook.com" target="_blank">
+      <img src="../assets/icons/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="../assets/icons/instagram.png" alt="Instagram">
+    </a>
+  </div>
+
+  <div class="footer-copy">
+    © 2026 OpNex (OPC) Pvt Ltd
+  </div>
+
+</footer>
+<script src="../assets/js/recruiterdashboard.js"></script>
+</body>
+</html>

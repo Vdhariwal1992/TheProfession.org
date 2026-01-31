@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post a Job | Employer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/post-job.css?v=2">
+</head>
+
+<body>
+
+<header class="employer-header">
+  <h1>Post a Job</h1>
+  <a href="/employer/recruiterdashboard.html" class="back-link">← Back to Dashboard</a>
+</header>
+
+<div class="post-job-container">
+  <form>
+
+    <!-- BASIC DETAILS -->
+    <div class="form-section">
+      <h2>Basic Job Details</h2>
+
+      <div class="form-group">
+        <label>Job Title</label>
+        <input id="jobTitle" type="text" placeholder="e.g. Cabin Crew">
+      </div>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label>Job Type</label>
+          <select id="jobType">
+            <option value="">Select</option>
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Contract</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Experience</label>
+          <select id="jobExp">
+            <option value="">Select</option>
+            <option>Fresher</option>
+            <option>1–3 Years</option>
+            <option>3–5 Years</option>
+            <option>5+ Years</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+  <label>Application Deadline</label>
+  <input type="date">
+</div>
+    <div class="form-group">
+  <label>Number of Openings</label>
+  <input type="number" min="1" placeholder="e.g. 5">
+</div>
+    <div class="form-group">
+  <label>Work Mode</label>
+  <select>
+    <option>On-site</option>
+    <option>Remote</option>
+    <option>Hybrid</option>
+  </select>
+</div>
+
+    <!-- LOCATION & SALARY -->
+    <div class="form-section">
+      <h2>Location & Salary</h2>
+
+      <div class="grid-2">
+        <div class="form-group">
+          <label>Location</label>
+          <input id="jobLocation" type="text" placeholder="City / Airport">
+        </div>
+
+        <div class="form-group">
+          <label>Salary Range</label>
+          <input id="jobSalary" type="text" placeholder="₹30,000 – ₹60,000">
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+   <div class="form-section">
+  <h2>Job Description</h2>
+  
+<!-- KEY RESPONSIBILITIES -->
+<div class="form-section">
+  <h2>Key Responsibilities</h2>
+  <textarea id="jobResponsibilities"
+    placeholder="List key responsibilities (one per line)"></textarea>
+</div>
+
+<!-- ELIGIBILITY -->
+<div class="form-section">
+  <h2>Eligibility Criteria</h2>
+  <textarea id="jobEligibility"
+    placeholder="List eligibility criteria"></textarea>
+</div>
+
+<!-- BENEFITS -->
+<div class="form-section">
+  <h2>Benefits</h2>
+  <textarea id="jobBenefits"
+    placeholder="List benefits offered"></textarea>
+</div>
+
+  <div class="form-group">
+    <textarea id="jobDesc" placeholder="Other description"></textarea>
+  </div>
+</div>
+
+    <!-- ACTIONS -->
+    <div class="form-actions">
+      <button type="button" class="btn-preview" id="previewBtn">  Preview Job</button>
+      <button type="submit" class="btn-primary">Post Job</button>
+    </div>
+
+  </form>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div class="preview-overlay" id="previewOverlay">
+  <div class="preview-card">
+
+    <h2 id="previewTitle"></h2>
+    <p class="preview-meta">
+      <span id="previewType"></span> •
+      <span id="previewExp"></span> •
+      <span id="previewLocation"></span>
+    </p>
+
+    <h4>Salary</h4>
+    <p id="previewSalary"></p>
+    <h4>Job Description</h4>
+    <p id="previewDesc"></p>
+
+    <div class="preview-actions">
+      <button class="btn-outline" id="closePreview">Edit</button>
+      <button class="btn-primary" id="confirmPostBtn">Confirm & Post</button>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="../assets/js/post-job.js"></script>
+
+</body>
+</html>

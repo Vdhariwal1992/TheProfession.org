@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile | TheProfession.org</title>
+
+<link rel="stylesheet" href="../assets/css/candidatedashboard.css">
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="container topbar-inner">
+
+    <div class="logo-text">TheProfession.org</div>
+
+    <div class="top-actions">
+
+      <!-- NOTIFICATION -->
+      <div class="notif-wrap" id="notifWrap">
+        <span class="bell">🔔</span>
+        <span class="notif-count" id="notifCount" style="display:none"></span>
+
+        <div class="notif-dropdown" id="notifDropdown">
+          <h4>Notifications</h4>
+          <div class="notif-item">
+            <b>New Job Posted</b>
+            <span>Indigo posted Cabin Crew job</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="top-profile">
+        <img id="topProfilePic" class="top-avatar" src="../assets/icons/user-male.png">
+
+        <div class="top-dropdown">
+          <a href="#">My Profile</a>
+          <a href="#">Settings</a>
+          <button>Logout</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+
+  </div>
+</header>
+
+<!-- ================= DASHBOARD ================= -->
+<section class="dashboard-wrapper container">
+
+  <div class="dashboard-layout">
+
+    <!-- ===== LEFT PROFILE COLUMN ===== -->
+    <aside class="profile-column">
+
+      <!-- PROFILE CARD -->
+      <div class="card profile-summary">
+        <img src="../assets/icons/user-male.png" class="side-avatar">
+        <h4 id="sideName">Full Name</h4>
+        <p class="side-role">Professional Title</p>
+
+        <div class="side-actions">
+<button class="side-btn msg locked" onclick="openPremiumModal()">✍️Message</button>
+
+          <button class="side-btn bridge ripple">🤝Bridge Now</button>
+        </div>
+      </div>
+
+      <!-- PROFILE COMPLETION -->
+      <div class="card completion-card small-card">
+        <h4>Profile Completion</h4>
+
+        <div class="progress-wrap">
+          <div class="progress-bar" style="width:65%"></div>
+        </div>
+
+        <p><b>65%</b> complete</p>
+
+        <ul class="complete-tasks">
+          <li class="done">Basic Info</li>
+<li class="done">Skills</li>
+<li class="incomplete">Upload Resume</li>
+<li class="incomplete">Add Experience</li>
+
+        </ul>
+      </div>
+
+      <!-- AI RESUME SCORE -->
+      <div class="card resume-score small-card">
+        <h4>Resume Score <span class="ai-badge">AI</span></h4>
+
+
+        <div class="score-circle">72</div>
+
+        <p class="score-text">Good — Improve keywords for better ranking</p>
+
+        <button class="side-btn bridge" onclick="openPremiumModal()">
+  Improve with AI
+</button>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="card profile-stats small-card">
+        <div class="stat">
+          <b>0</b>
+          <span>Connections</span>
+        </div>
+        <div class="stat">
+          <b>12</b>
+          <span>Views</span>
+        </div>
+        <div class="stat">
+          <b>3</b>
+          <span>Applications</span>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="card">
+        <h3>About</h3>
+        <p>...</p>
+      </div>
+
+      <div class="card">
+        <h3>Experience</h3>
+        <p>...</p>
+      </div>
+
+      <div class="card">
+        <h3>Education</h3>
+        <p>...</p>
+      </div>
+
+      <div class="card">
+        <h3>Skills</h3>
+        <p>...</p>
+      </div>
+
+    </aside>
+
+
+    <!-- ===== RIGHT FEED COLUMN ===== -->
+    <main class="feed-column">
+
+      <!-- POST -->
+      <div class="post-box">
+
+  <textarea id="postText" placeholder="Share something valuable, your achievement, or ask a career question…"></textarea>
+
+  <!-- POLL OPTIONS (HIDDEN BY DEFAULT) -->
+  <div class="poll-box" id="pollBox">
+    <input type="text" placeholder="Option 1">
+    <input type="text" placeholder="Option 2">
+    <input type="text" placeholder="Option 3 (optional)">
+  </div>
+
+  <div class="post-actions">
+
+    <div class="post-tools">
+      <button class="tool-btn" onclick="document.getElementById('postImage').click()">
+        🖼 Image
+      </button>
+
+      <button class="tool-btn poll-btn" onclick="togglePoll()">
+        📊 Poll
+      </button>
+
+      <input type="file" id="postImage" accept="image/*" hidden>
+    </div>
+
+    <button class="primary-btn ripple">Post</button>
+
+  </div>
+
+</div>
+
+
+      <div id="postFeed"></div>
+
+      <!-- FEATURED JOBS -->
+      <div class="card featured-jobs">
+
+        <div class="featured-head">
+          <h3>🔥 Featured Jobs</h3>
+          <a href="featured-jobs.html" class="view-all-btn solid">View All</a>
+        </div>
+
+        <div class="job-mini">
+          <b>Cabin Crew – Indigo</b>
+          <span>Delhi · Apply Now</span>
+        </div>
+
+        <div class="job-mini">
+          <b>HR Executive – IT Firm</b>
+          <span>Noida · Apply Now</span>
+        </div>
+
+        <div class="job-mini">
+          <b>Sales Manager – Real Estate</b>
+          <span>Gurgaon · Apply Now</span>
+        </div>
+
+      </div>
+
+      <!-- SUGGESTED CONNECTIONS -->
+      <div class="card suggested">
+
+        <h3>🤝 Suggested Connections</h3>
+
+        <div class="suggest-item">
+          <img src="../assets/icons/user-male.png">
+          <div>
+            <b>Rahul Sharma</b>
+            <span>HR Manager</span>
+          </div>
+          <button>Bridge Now</button>
+        </div>
+
+        <div class="suggest-item">
+          <img src="../assets/icons/user-male.png">
+          <div>
+            <b>Anita Verma</b>
+            <span>Recruiter</span>
+          </div>
+          <button>Bridge Now</button>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MODALS ================= -->
+<div id="editModal" class="modal">
+  <div class="modal-box">
+
+    <h3>Edit Profile</h3>
+
+    <label>Current Role</label>
+    <input id="editRole">
+
+    <label>City</label>
+    <input id="editCity">
+
+    <label>Country</label>
+    <input id="editCountry">
+
+    <label>Professional Summary</label>
+    <textarea id="editSummary"></textarea>
+
+    <label>Skills (comma separated)</label>
+    <input id="editSkills">
+
+    <label>Change Profile Photo</label>
+    <input type="file" id="editPhoto">
+
+    <label>Change Cover Photo</label>
+    <input type="file" id="editCover">
+
+    <div class="modal-actions">
+      <button id="saveEdit" class="save-btn">Save</button>
+      <button onclick="closeModal()" class="cancel-btn">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><img src="../assets/icons/linkedin.png"></a>
+      <a href="#"><img src="../assets/icons/x.png"></a>
+      <a href="#"><img src="../assets/icons/facebook.png"></a>
+      <a href="#"><img src="../assets/icons/instagram.png"></a>
+    </div>
+
+    <div class="footer-copy">© 2026 OpNex (OPC) Pvt Ltd</div>
+
+  </div>
+</footer>
+
+</div> <!-- page-wrapper -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const avatar = document.getElementById("topProfilePic");
+  const dropdown = document.querySelector(".top-dropdown");
+
+  console.log("avatar:", avatar);
+  console.log("dropdown:", dropdown);
+
+  let dropTimeout;
+
+  avatar.addEventListener("click", function(e){
+    e.stopPropagation();
+    dropdown.classList.add("show");
+
+    clearTimeout(dropTimeout);
+    dropTimeout = setTimeout(() => {
+      dropdown.classList.remove("show");
+    }, 4000);
+  });
+
+  document.addEventListener("click", function(){
+    dropdown.classList.remove("show");
+  });
+
+  dropdown.addEventListener("mouseenter", () => {
+    clearTimeout(dropTimeout);
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    dropTimeout = setTimeout(() => {
+      dropdown.classList.remove("show");
+    }, 2000);
+  });
+
+});
+</script>
+
+<script type="module">
+
+import { initializeApp } from 
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+import { getFirestore } from
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.db = db;   // make db available globally
+
+console.log("🔥 Firebase connected");
+
+</script>
+
+<script src="../assets/js/candidate-dashboard.js"></script>
+
+<!-- ===== PREMIUM MODAL ===== -->
+<div id="premiumModal" class="modal">
+
+  <div class="premium-box">
+
+    <h2>Upgrade to Premium 🚀</h2>
+    <p class="sub-text">Get hired faster with exclusive features</p>
+
+    <div class="premium-features">
+
+  <div class="pf-item">💬 Direct Messaging to Recruiters</div>
+  <div class="pf-item">⚡ Instant Job Alerts</div>
+  <div class="pf-item">🤖 AI Resume Improvement</div>
+  <div class="pf-item">🎯 Priority Applications</div>
+
+  <div class="pf-item highlight">📡 Real-time Application Tracking</div>
+  <div class="pf-item highlight">🎥 Virtual Interviews & Online Assessments</div>
+
+</div>
+<div class="popular-badge">Most Popular</div>
+
+    <div class="pricing-box">
+      <span class="old">₹999</span>
+      <span class="price">₹499 / month</span>
+    </div>
+
+    <button class="premium-btn">Upgrade Now</button>
+
+    <button class="cancel-btn" onclick="closePremiumModal()">Maybe Later</button>
+
+  </div>
+
+</div>
+
+
+
+
+</body>
+</html>
